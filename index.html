@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bike Configurator</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-7 left-panel">
+      <div class="logoImg mt-4" data-aos="fade-right" data-aos-duration="2000">
+        <img src="pics/Lovens_Black_RGB_LOGO.png" class="img-fluid" alt="">
+      </div>
+      <div class="reviewImg mt-2" data-aos="fade-right" data-aos-duration="2000">
+        <img src="pics/iF-DESIGN-AWARD-2026.jpg" class="img-fluid" alt="">
+        <img src="pics/Cargobike-Award-2026.png" class="img-fluid" alt="">
+      </div>
+      <img id="bikeImage" src="https://via.placeholder.com/600x300"  data-aos="fade-right" data-aos-duration="2000">
+      <div class="copyright" data-aos="fade-right" data-aos-duration="2000"><p class="">Copyright © 2026 Lovens. Made by Devansh. All rights reserved.</p></div>
+    </div>
+
+    <div class="col-md-5 right-panel">
+
+      <!-- STEPS -->
+      <div class="steps d-flex justify-content-center mt-1">
+        <span id="s1" class="active" onclick="goToStep(1)" style="cursor: pointer;">1. Version</span>
+        <span id="s2" onclick="goToStep(2)" style="cursor: pointer;">2. Bicycle</span>
+        <span id="s3" onclick="goToStep(3)" style="cursor: pointer;">3. Accessories</span>
+        <span id="s4" onclick="goToStep(4)" style="cursor: pointer;">4. Summary</span>
+      </div>
+
+      <div class="step-content p-4">
+        <!-- STEP 1 -->
+        <div id="step1" class="step active-step" data-aos="zoom-out-down" data-aos-duration="2000">
+          <div class="option-card selected p-4" data-price="1000" data-group="motorcycle" onclick="selectOption(this, 1000, null, 'motorcycle')">
+            <img src="pics/demopic1.png" alt="MotoCycle 1" class="img-fluid">
+          </div>
+
+          <div class="option-card p-4" data-price="800" data-group="motorcycle" onclick="selectOption(this, 800, null, 'motorcycle')">
+            <img src="pics/demopic2.png" alt="MotoCycle 2" class="img-fluid">
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div id="step2" class="step" data-aos="zoom-out-down" data-aos-duration="2000">
+          <div class="section">
+            <h3 class="section-title">Select your model</h3>
+            <div class="card-grid model-grid">
+              <div class="option-card model-card selected" data-price="5699" data-group="model" onclick="selectOption(this, 5699, null, 'model')">
+                <div class="model-badge">Entry-level model</div>
+                <div class="model-name">Explorer 2 S60 <span class="info-icon tooltip-icon" data-tooltip="1 child + dog">i</span></div>
+                <div class="info-row"><span>From ₹5699.00</span></div>
+                <p>Power for daily rides with a light load</p>
+              </div>
+
+              <div class="option-card model-card" data-price="6299" data-group="model" onclick="selectOption(this, 6299, null, 'model')">
+                <div class="model-badge">Best Seller</div>
+                <div class="model-name">Explorer 2 S75 <span class="info-icon tooltip-icon" data-tooltip="2 children / groceries & cargo">i</span></div>
+                <div class="info-row"><span>From ₹6299.00</span></div>
+                <p>Extra power for daily trips with a medium load</p>
+              </div>
+
+              <div class="option-card model-card" data-price="6599" data-group="model" onclick="selectOption(this, 6599, null, 'model')">
+                <div class="model-badge">Power version</div>
+                <div class="model-name">Explorer 2 S100 <span class="info-icon tooltip-icon" data-tooltip="2 children / groceries & cargo">i</span></div>
+                <div class="info-row"><span>From ₹6599.00</span></div>
+                <p>Maximum power for trips with heavier loads</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3 class="section-title">Color</h3>
+            <div class="card-grid color-grid">
+              <div class="option-card small-card color-card" data-group="frame" onclick="selectOption(this, 0, null, 'frame')">
+                <div class="color-row">
+                  <div class="color-swatch swatch-avenue-green"></div>
+                  <div>
+                    <div class="color-label">Avenue Green</div>
+                    <div class="color-type">Frame</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="option-card small-card color-card" data-group="frame" onclick="selectOption(this, 0, null, 'frame')">
+                <div class="color-row">
+                  <div class="color-swatch swatch-alloy-grey"></div>
+                  <div>
+                    <div class="color-label">Alloy Grey</div>
+                    <div class="color-type">Frame</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="option-card small-card color-card" data-group="interior" onclick="selectOption(this, 0, null, 'interior')">
+                <div class="color-row">
+                  <div class="color-swatch swatch-black"></div>
+                  <div>
+                    <div class="color-label">Black</div>
+                    <div class="color-type">Interior</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="option-card small-card color-card" data-group="interior" onclick="selectOption(this, 0, null, 'interior')">
+                <div class="color-row">
+                  <div class="color-swatch swatch-brown"></div>
+                  <div>
+                    <div class="color-label">Brown</div>
+                    <div class="color-type">Interior</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3 class="section-title">Options</h3>
+            <p class="section-text">Additional options for increased safety and comfort</p>
+            <div class="card-grid option-details">
+              <div class="option-card detail-card" data-price="300" data-group="options" onclick="selectOption(this, 300, null, 'options')">
+                <div class="detail-heading">
+                  <span>ABS Brake System</span>
+                  <span class="price-tag">From ₹300.00</span>
+                </div>
+                <p>More control and extra security. With the innovative anti-lock braking system (ABS) you add an innovative safety system to your Lovens Explorer 2. A combination of sensors and smart technology prevents the front wheel from locking in the event of a sudden emergency stop.</p>
+              </div>
+
+              <div class="option-card detail-card" data-price="300" data-group="options" onclick="selectOption(this, 300, null, 'options')">
+                <div class="detail-heading">
+                  <span>Automatic acceleration</span>
+                  <span class="price-tag">From ₹300.00</span>
+                </div>
+                <p>Upgrade your riding experience with an automatic shifting system that shifts smoothly and steplessly. Via the settings, you can set the desired pedaling pace. As soon as this pace is reached, it switches automatically.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3 class="section-title">Battery</h3>
+            <div class="card-grid battery-grid">
+              <div class="option-card battery-card" data-price="0" data-group="battery" onclick="selectOption(this, 0, null, 'battery')">
+                <div class="battery-top"><span class="info-icon">⚡</span><strong>Bosch 400Wh</strong></div>
+                <p>Ideal for short distances in flat terrain, when regular charging is not a problem.</p>
+              </div>
+              <div class="option-card battery-card" data-price="300" data-group="battery" onclick="selectOption(this, 300, null, 'battery')">
+                <div class="battery-top"><span class="info-icon">⚡</span><strong>Bosch 545Wh</strong></div>
+                <p>Perfect for daily rides and occasional longer distances, so you don't have to charge the battery as often.</p>
+                <div class="price-secondary">From ₹300.00</div>
+              </div>
+              <div class="option-card battery-card" data-price="600" data-group="battery" onclick="selectOption(this, 600, null, 'battery')">
+                <div class="battery-top"><span class="info-icon">⚡</span><strong>Bosch 800Wh</strong></div>
+                <p>For long and demanding distances, and for those who want to charge the battery as little as possible.</p>
+                <div class="price-secondary">From ₹600.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div id="step3" class="step">
+          <div class="section">
+            <h3 class="section-title">Select accessories</h3>
+            <p class="section-text">You can choose multiple accessories at once.</p>
+            <div class="card-grid accessory-grid">
+              <div class="option-card accessory-card" data-price="3239.5" data-group="accessories" onclick="toggleAccessory(this, 3239.5)">
+                <div class="accessory-symbol">+</div>
+                <div class="accessory-name">Rain cover</div>
+                <div class="accessory-price">From ₹3,239.50</div>
+                <p>The best way to protect your precious cargo from rain.</p>
+              </div>
+
+              <div class="option-card accessory-card" data-price="1349.5" data-group="accessories" onclick="toggleAccessory(this, 1349.5)">
+                <div class="accessory-symbol">+</div>
+                <div class="accessory-name">Maxi-Cosi adapter set</div>
+                <div class="accessory-price">From ₹1,349.50</div>
+                <p>Securely attach the Maxi-Cosi to your Lovens.</p>
+              </div>
+
+              <div class="option-card accessory-card" data-price="359.5" data-group="accessories" onclick="toggleAccessory(this, 359.5)">
+                <div class="accessory-symbol">+</div>
+                <div class="accessory-name">Toddler shell adapter</div>
+                <div class="accessory-price">From ₹359.50</div>
+                <p>Securely attach your toddler seat to your Lovens.</p>
+              </div>
+
+              <div class="option-card accessory-card" data-price="1169.5" data-group="accessories" onclick="toggleAccessory(this, 1169.5)">
+                <div class="accessory-symbol">+</div>
+                <div class="accessory-name">LED Daytime Running Lights</div>
+                <div class="accessory-price">From ₹1,169.50</div>
+                <p>With these LED lights you cannot drive by unseen.</p>
+              </div>
+
+              <div class="option-card accessory-card" data-price="1079.5" data-group="accessories" onclick="toggleAccessory(this, 1079.5)">
+                <div class="accessory-symbol">+</div>
+                <div class="accessory-name">Box Cover</div>
+                <div class="accessory-price">From ₹1,079.50</div>
+                <p>Cover and protect your precious cargo in the Lovens bin.</p>
+              </div>
+
+              <div class="option-card accessory-card" data-price="1349.5" data-group="accessories" onclick="toggleAccessory(this, 1349.5)">
+                <div class="accessory-symbol">+</div>
+                <div class="accessory-name">Rain cover</div>
+                <div class="accessory-price">From ₹1,349.50</div>
+                <p>Leave your Lovens Explorer outside with peace of mind.</p>
+              </div>
+
+              <div class="option-card accessory-card" data-price="809.5" data-group="accessories" onclick="toggleAccessory(this, 809.5)">
+                <div class="accessory-symbol">+</div>
+                <div class="accessory-name">Bicycle seat adapter</div>
+                <div class="accessory-price">From ₹809.50</div>
+                <p>Attach a bicycle front seat in the box of your Lovens.</p>
+              </div>
+
+              <div class="option-card accessory-card" data-price="899.5" data-group="accessories" onclick="toggleAccessory(this, 899.5)">
+                <div class="accessory-symbol">+</div>
+                <div class="accessory-name">Luggage carrier</div>
+                <div class="accessory-price">From ₹899.50</div>
+                <p>Transport extra luggage with the MIK HD system.</p>
+              </div>
+
+              <div class="option-card accessory-card" data-price="0" data-group="accessories" onclick="toggleAccessory(this, 0)">
+                <div class="accessory-symbol">+</div>
+                <div class="accessory-name">Front seat</div>
+                <div class="accessory-price">Price on request</div>
+                <p>An extra seat for your precious Lovens cargo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- STEP 4 -->
+      <div id="step4" class="step">
+        <div class="invoice-container">
+          <div class="invoice-header">
+            <h3>Order Summary</h3>
+            <p class="invoice-id">Order #12345</p>
+          </div>
+
+          <div class="invoice-items">
+            <div class="invoice-section">
+              <h4>Selected Items</h4>
+              <div id="summaryItems" class="summary-items">
+                <!-- Items will be populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <div class="invoice-total">
+            <div class="total-row">
+              <span class="total-label">Total Amount:</span>
+              <span class="total-amount">₹ <span id="finalPrice">0</span></span>
+            </div>
+          </div>
+
+          <div class="payment-section">
+            <h4>Select Payment Method</h4>
+            <div class="payment-methods">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="credit-card" checked>
+                <span class="payment-icon">💳</span>
+                <span class="payment-label">Credit Card</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="debit-card">
+                <span class="payment-icon">💳</span>
+                <span class="payment-label">Debit Card</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="upi">
+                <span class="payment-icon">📱</span>
+                <span class="payment-label">UPI</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="net-banking">
+                <span class="payment-icon">🏦</span>
+                <span class="payment-label">Net Banking</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="social-media-footer">
+            <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#1DA1F2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 10.42.5 10.42.5"></path></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#E4405F"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="#E4405F" stroke-width="2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="#E4405F" stroke-width="2"></circle><circle cx="17" cy="7" r="1" fill="#E4405F"></circle></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#1877F2"><path d="M18 2h-3a6 6 0 00-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 011-1h3z"></path></svg>
+            </a>
+            <a href="mailto:contact@lovens.com" class="social-icon" title="Email">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#666"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="#666" stroke-width="2"></rect><path d="M22 6L12 13 2 6" fill="none" stroke="#666" stroke-width="2"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEXT BUTTON -->
+       <div class="footer-btn">
+        <button class="prev-btn mt-1" onclick="prevStep()">Back</button>
+        <button class="next-btn mt-1" onclick="nextStep()">Next step</button>
+        <button class="cart-btn mt-1">Proceed</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
