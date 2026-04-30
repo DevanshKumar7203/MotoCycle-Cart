@@ -563,3 +563,483 @@ body {
   width: 20px;
   height: 20px;
 }
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* TABLETS (768px to 1023px) */
+@media (max-width: 1023px) {
+  .left-panel {
+    height: auto;
+    min-height: 400px;
+    padding: 20px 0;
+  }
+
+  .right-panel {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .logoImg {
+    width: 200px;
+  }
+
+  .reviewImg {
+    width: 45px;
+  }
+
+  .section-title {
+    font-size: 1.05rem;
+  }
+
+  .model-name {
+    font-size: 1.05rem;
+  }
+
+  .color-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payment-methods {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    gap: 15px;
+    font-size: 0.95rem;
+  }
+}
+
+/* TABLETS LANDSCAPE & SMALL LAPTOPS (768px to 999px) */
+@media (max-width: 999px) and (min-width: 768px) {
+  .left-panel {
+    height: auto;
+    min-height: 350px;
+  }
+
+  .logoImg {
+    width: 180px;
+  }
+
+  .reviewImg {
+    width: 40px;
+  }
+
+  #bikeImage {
+    max-width: 70%;
+    max-height: 70%;
+  }
+}
+
+/* MOBILE PHONES (below 768px) */
+@media (max-width: 767px) {
+  body {
+    background: #f2f2f2;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  /* LEFT PANEL MOBILE */
+  .left-panel {
+    width: 100% !important;
+    height: auto;
+    min-height: 300px;
+    padding: 0;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .left-panel img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .logoImg {
+    position: static;
+    width: 150px;
+    margin: 15px auto;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .logoImg img {
+    width: 100%;
+    height: auto;
+  }
+
+  .reviewImg {
+    position: static;
+    width: 100%;
+    max-width: 120px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    padding: 0 15px;
+  }
+
+  .reviewImg img {
+    width: 50px;
+    height: auto;
+  }
+
+  #bikeImage {
+    position: relative;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    max-height: 250px;
+    margin: 20px 0;
+    top: auto;
+    left: auto;
+  }
+
+  .left-panel .copyright {
+    position: static;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+
+  .left-panel .copyright p {
+    font-size: 0.75rem;
+  }
+
+  /* RIGHT PANEL MOBILE */
+  .right-panel {
+    width: 100% !important;
+    height: auto;
+    padding: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .steps span {
+    padding: 8px 12px;
+    border-bottom: 2px solid transparent;
+    text-align: left;
+  }
+
+  .steps span.active {
+    border-bottom: 2px solid black;
+    padding-bottom: 6px;
+  }
+
+  .step-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 0 240px;
+    margin-bottom: 0px;
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .card-grid {
+    display: grid;
+    gap: 12px;
+  }
+
+  .model-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .color-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .option-card {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  .model-card {
+    padding: 15px;
+  }
+
+  .model-badge {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+    margin-bottom: 8px;
+  }
+
+  .model-name {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    gap: 6px;
+  }
+
+  .info-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+  }
+
+  .info-row {
+    font-size: 0.85rem;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .color-swatch {
+    width: 32px;
+    height: 32px;
+  }
+
+  .color-label {
+    font-size: 0.9rem;
+  }
+
+  .color-type {
+    font-size: 0.85rem;
+  }
+
+  .small-card {
+    min-height: 80px;
+    padding: 12px;
+  }
+
+  .accessory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .accessory-card {
+    padding: 15px;
+  }
+
+  .accessory-name {
+    font-size: 0.95rem;
+    margin-right: 24px;
+  }
+
+  .accessory-price {
+    font-size: 0.9rem;
+  }
+
+  .accessory-card p {
+    font-size: 0.85rem;
+  }
+
+  .detail-card {
+    padding: 15px;
+  }
+
+  .battery-card {
+    padding: 15px;
+  }
+
+  /* INVOICE STYLES MOBILE */
+  .invoice-container {
+    padding: 16px;
+    padding-bottom: 80px;
+  }
+
+  .invoice-header {
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+
+  .invoice-header h3 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+  }
+
+  .invoice-id {
+    font-size: 0.85rem;
+  }
+
+  .invoice-section {
+    margin-bottom: 16px;
+  }
+
+  .invoice-section h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .summary-items {
+    max-height: 120px;
+  }
+
+  .summary-item {
+    padding: 6px 0;
+    font-size: 0.85rem;
+  }
+
+  .total-row {
+    font-size: 1.1rem;
+  }
+
+  .payment-methods {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .payment-option {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .payment-icon {
+    font-size: 1.2rem;
+    margin-right: 6px;
+  }
+
+  .payment-label {
+    font-size: 0.9rem;
+  }
+
+  /* FOOTER BUTTON MOBILE */
+  .footer-btn {
+    padding: 10px 15px 12px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .prev-btn,
+  .next-btn,
+  .cart-btn {
+    padding: 12px;
+    font-size: 0.95rem;
+    border-radius: 25px;
+  }
+
+  .social-media-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 0;
+    font-size: 0.85rem;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .tooltip-icon:hover::after {
+    bottom: 110%;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+/* VERY SMALL PHONES (below 480px) */
+@media (max-width: 479px) {
+  .logoImg {
+    width: 120px;
+  }
+
+  .reviewImg {
+    max-width: 100px;
+  }
+
+  #bikeImage {
+    max-height: 200px;
+    margin: 15px 0;
+  }
+
+  .right-panel {
+    padding: 12px;
+    padding-bottom: 130px;
+  }
+
+  .steps {
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+
+  .steps span {
+    padding: 6px 10px;
+  }
+
+  .section-title {
+    font-size: 0.95rem;
+  }
+
+  .model-card {
+    padding: 12px;
+  }
+
+  .model-name {
+    font-size: 0.9rem;
+  }
+
+  .model-badge {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
+
+  .info-row {
+    font-size: 0.8rem;
+  }
+
+  .footer-btn {
+    padding: 8px 12px;
+  }
+
+  .prev-btn,
+  .next-btn,
+  .cart-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .color-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .payment-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .invoice-container {
+    padding: 12px;
+    padding-bottom: 80px;
+  }
+
+  .left-panel .copyright p {
+    font-size: 0.7rem;
+  }
+}
