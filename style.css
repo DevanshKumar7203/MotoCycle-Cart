@@ -85,7 +85,8 @@ body {
 .step-content {
   flex: 1;
   overflow-y: auto;
-  padding: 10px 0 140px;
+  padding: 10px 0 180px;
+  height: 60vh;
 }
 
 .section {
