@@ -9,6 +9,13 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+function scrollToStepTop() {
+  const stepContent = document.querySelector('.step-content');
+  if(stepContent) {
+    stepContent.scrollTop = 0;
+  }
+}
+
 function nextStep() {
   if(currentStep < 4){
     document.getElementById("step"+currentStep).classList.remove("active-step");
@@ -29,6 +36,8 @@ function nextStep() {
   if(currentStep > 1){
     document.querySelector(".prev-btn").style.display = "block";
   }
+
+  scrollToStepTop();
 }
 
 function prevStep() {
@@ -50,6 +59,8 @@ function prevStep() {
   if(currentStep == 1){
     document.querySelector(".prev-btn").style.display = "none";
   }
+
+  scrollToStepTop();
 }
 
 function goToStep(stepNum) {
@@ -76,6 +87,8 @@ function goToStep(stepNum) {
     } else {
       document.querySelector(".prev-btn").style.display = "block";
     }
+
+    scrollToStepTop();
   }
 }
 
