@@ -60,7 +60,6 @@ body {
   color: #555;
 }
 
-/* RIGHT PANEL */
 .right-panel {
   position: relative;
   height: 100vh;
@@ -290,7 +289,6 @@ body {
   color: black;
 }
 
-/* CARD */
 .option-card {
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -356,7 +354,6 @@ body {
   margin: 0;
 }
 
-/* BUTTON */
 .footer-btn {
   position: absolute;
   bottom: 0;
@@ -399,7 +396,6 @@ body {
   font-weight: 500;
 }
 
-/* STEP */
 .step {
   display: none;
 }
@@ -408,7 +404,6 @@ body {
   display: block;
 }
 
-/* INVOICE STYLES */
 .invoice-container {
   background: #fff;
   border: 1px solid #ddd;
@@ -477,7 +472,6 @@ body {
   color: #333;
 }
 
-/* PAYMENT METHODS */
 .payment-section {
   margin-bottom: 20px;
 }
@@ -531,7 +525,6 @@ body {
   font-weight: 500;
 }
 
-/* SOCIAL MEDIA FOOTER */
 .social-media-footer {
   display: flex;
   justify-content: center;
@@ -565,9 +558,7 @@ body {
   height: 20px;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
 
-/* TABLETS (768px to 1023px) */
 @media (max-width: 1023px) {
   .left-panel {
     height: auto;
@@ -610,7 +601,7 @@ body {
   }
 }
 
-/* TABLETS LANDSCAPE & SMALL LAPTOPS (768px to 999px) */
+
 @media (max-width: 999px) and (min-width: 768px) {
   .left-panel {
     height: auto;
@@ -631,7 +622,7 @@ body {
   }
 }
 
-/* MOBILE PHONES (below 768px) */
+
 @media (max-width: 767px) {
   body {
     background: #f2f2f2;
@@ -645,7 +636,7 @@ body {
     flex-direction: column;
   }
 
-  /* LEFT PANEL MOBILE */
+
   .left-panel {
     width: 100% !important;
     height: auto;
@@ -861,7 +852,6 @@ body {
     padding: 15px;
   }
 
-  /* INVOICE STYLES MOBILE */
   .invoice-container {
     padding: 16px;
     padding-bottom: 80px;
@@ -923,7 +913,6 @@ body {
     font-size: 0.9rem;
   }
 
-  /* FOOTER BUTTON MOBILE */
   .footer-btn {
     display: flex;
     flex-direction: column;
@@ -974,7 +963,7 @@ body {
   }
 }
 
-/* VERY SMALL PHONES (below 480px) */
+
 @media (max-width: 479px) {
   .logoImg {
     width: 120px;

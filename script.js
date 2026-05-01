@@ -1,7 +1,7 @@
 let currentStep = 1;
 let total = 0;
 
-// Initialize default selection on page load
+
 window.addEventListener('DOMContentLoaded', function() {
   const firstMotorcycle = document.querySelector('#step1 .option-card');
   if(firstMotorcycle) {
